@@ -1,5 +1,5 @@
 # Reacting to fundraising status changes
-We want to react on multiple status changes regarding project fundraising steps. Take a look at the [FundraisingService.java](..%2Fsrc%2Fmain%2Fjava%2Fpl%2Fwojtyna%2Ftrainings%2Frecipes%2Fproblems%2Ftask6%2Fservices%2FFundraisingService.java).
+We want to react on multiple status changes regarding project fundraising steps. Take a look at the [FundraisingService.java](..%2F..%2Fsrc%2Fmain%2Fjava%2Fpl%2Fwojtyna%2Ftrainings%2Frecipes%2Fcrowdsorcery%2Ftasks%2Ftask6%2Fservices%2FFundraisingService.java).
 
 ## Problems
 Currently, we want to react by sending an email to the project owner, sending slack notifications and initiating the marketing process. However, we want to be able to react in different ways in the future. We want to be able to add new reactions without changing the `FundraisingService` class.
