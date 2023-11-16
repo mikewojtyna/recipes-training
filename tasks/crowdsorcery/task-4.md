@@ -1,14 +1,18 @@
-# Subdomains and model layers
+# Fundraising service strategy
+Take a look at [FundraisingService.java](..%2F..%2Fsrc%2Fmain%2Fjava%2Fpl%2Fwojtyna%2Ftrainings%2Frecipes%2Fcrowdsorcery%2Ftasks%2Ftask4%2Fservices%2FFundraisingService.java) class and `processProposal` method.
+
+## Problems
+What problems do you see? What would happen if new processing requirements are added frequently and become more and more complex? How would you change the `processProposal` method to make it more flexible?
 
 ## Your task
-Segregate current Building Blocks into model layers.
+Refactor the `processProposal` method to use the Strategy pattern and write tests just for `processProposal` method.
 
-### Solution
-You can find solutions in the `solutions.task4` package.
+### Extra
+Do you see any other methods that could be refactored using the Strategy pattern?
 
 ## Discussion
-- How was your initial model changed?
-- Was the stratification natural?
-- What are the responsibilities of each layer?
-- What are the benefits?
-- Are there any drawbacks?
+- How does the introduction of the strategy affect the number of test cases that need to be verified?
+- How does the introduction of the strategy affect the project's extensibility?
+- Where do you see the SOLID: Open-Closed Principle being applied?
+- Provide examples of projects you are working on where such a solution would be beneficial and justified
+- What are the cons of the Strategy pattern?
