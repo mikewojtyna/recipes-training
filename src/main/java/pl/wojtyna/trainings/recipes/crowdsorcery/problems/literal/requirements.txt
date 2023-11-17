@@ -1,0 +1,3 @@
+- Fundraising must start immediately after first investment is made
+- Investor never cannot invest more than her total deposit value
+- All funds must be released immediately to the project when it is funded
