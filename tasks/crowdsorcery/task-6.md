@@ -22,6 +22,6 @@ There are following rules:
 You can find solutions in the [solutions](..%2F..%2Fsrc%2Fmain%2Fjava%2Fpl%2Fwojtyna%2Ftrainings%2Frecipes%2Fcrowdsorcery%2Fsolutions) package.
 
 ## Discussion
-- Is it easier to add new reactions after using events to integrate vetween modules?
+- Is it easier to add new reactions after using events to integrate between modules?
 - What are the problems of Event Driven Architecture?
 - When should we use Event Driven Architecture?
