@@ -1,29 +1,27 @@
-# Supple design & policies
+# Reacting to fundraising status changes
+We want to react on multiple status changes regarding project fundraising steps. Take a look at the [FundraisingService.java](..%2F..%2Fsrc%2Fmain%2Fjava%2Fpl%2Fwojtyna%2Ftrainings%2Frecipes%2Fcrowdsorcery%2Ftasks%2Ftask6%2Fservices%2FFundraisingService.java).
+
+## Problems
+Currently, we want to react by sending an email to the project owner, sending slack notifications and initiating the marketing process. However, we want to be able to react in different ways in the future. We want to be able to add new reactions without changing the `FundraisingService` class.
+
+The current design definitely doesn't support that. The fundraising service acts a a god class delegating the work to multiple other services handling status changes. Each time new reaction is added, we need to change the `FundraisingService` class.
 
 ## Your task
-Create a new model supporting the following requirements.
+Decouple FundraisingService from the reactions. The reactions should be able to subscribe to the fundraising status changes and react accordingly. The reactions should be able to subscribe to multiple status changes.
 
-1. Project verifiers can decide if proposal can be accepted or rejected based on multiple factors:
-    - Project description
-    - Project goal
-    - Loan schedule
-    - Interest rate
-    - Borrower's credit score
-    - And possibly many more...
-2. Investors can invest into assets using investment strategies
-   1. Manual into project
-   2. Manual into asset
-   3. Automated preset strategy
-   4. Automated custom strategy
-3. Interests paid to investors can change dynamically over the lifetime of a project. For example, the interest rate can depend on the country of the borrower, the amount of money already raised, the number of investors, etc.
+1. Model status changes as events.
+2. Publish events from the `FundraisingService` class.
+3. Handle mailing, slack notifications and marketing as event subscribers handling the interesting events.
 
-Consider using the Policy building block.
+There are following rules:
+- Mail notification subscriber should react on any event
+- Slack notification subscriber should react only on Project Accepted or Project Rejected event
+- Marketing subscriber should react only on Project Fundraising Started event
 
 ### Solution
 You can find solutions in the [solutions](..%2F..%2Fsrc%2Fmain%2Fjava%2Fpl%2Fwojtyna%2Ftrainings%2Frecipes%2Fcrowdsorcery%2Fsolutions) package.
 
 ## Discussion
-- When do you introduce policies?
-- What are the differences between stable and dynamic logic?
-- What are the benefits of introducing polciies?
-- Are there any drawbacks of introducing policies?
+- Is it easier to add new reactions after using events to integrate vetween modules?
+- What are the problems of Event Driven Architecture?
+- When should we use Event Driven Architecture?
