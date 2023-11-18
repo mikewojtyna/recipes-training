@@ -10,6 +10,9 @@ Refactor the `processProposal` method to use the Strategy pattern and write test
 ### Extra
 Do you see any other methods that could be refactored using the Strategy pattern?
 
+### Solution
+You can find solutions in the [solutions](..%2F..%2Fsrc%2Fmain%2Fjava%2Fpl%2Fwojtyna%2Ftrainings%2Frecipes%2Fcrowdsorcery%2Fsolutions) package.
+
 ## Discussion
 - How does the introduction of the strategy affect the number of test cases that need to be verified?
 - How does the introduction of the strategy affect the project's extensibility?

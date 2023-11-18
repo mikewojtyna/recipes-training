@@ -20,7 +20,7 @@ Create a new model supporting the following requirements.
 Consider using the Policy building block.
 
 ### Solution
-You can find solutions in the `solutions.task5` package.
+You can find solutions in the [solutions](..%2F..%2Fsrc%2Fmain%2Fjava%2Fpl%2Fwojtyna%2Ftrainings%2Frecipes%2Fcrowdsorcery%2Fsolutions) package.
 
 ## Discussion
 - When do you introduce policies?

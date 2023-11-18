@@ -19,7 +19,7 @@ There are following rules:
 - Marketing subscriber should react only on Project Fundraising Started event
 
 ### Solution
-As always, you can find the solution in the `solutions.task6` package.
+You can find solutions in the [solutions](..%2F..%2Fsrc%2Fmain%2Fjava%2Fpl%2Fwojtyna%2Ftrainings%2Frecipes%2Fcrowdsorcery%2Fsolutions) package.
 
 ## Discussion
 - Is it easier to add new reactions after using events to integrate vetween modules?

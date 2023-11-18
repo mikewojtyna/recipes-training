@@ -11,7 +11,7 @@ Create model of each domain discovered in the previous task. Separate applicatio
 4. If you are not sure about the relations between aggregates, use Gibberish Game.
 
 ### Solution
-You can find solutions in the `solutions.task3` package.
+You can find solutions in the [solutions](..%2F..%2Fsrc%2Fmain%2Fjava%2Fpl%2Fwojtyna%2Ftrainings%2Frecipes%2Fcrowdsorcery%2Fsolutions) package.
 
 ## Discussion
 - What are the relationships between your aggregates and entities?
