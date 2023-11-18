@@ -68,6 +68,8 @@ There are three ways how investors can invest their money:
 
 Before investor can invest into asset or project, he needs to deposit money into his account. Investor can withdraw his money at any time.
 
+Project cannot be ever funded more than 100%. If the project is already funded, investors cannot invest into it.
+
 ### Investment simulation
 
 Investors can run investment simulations to test their investment strategies on historical data. This allows them to see how their strategies would perform in the past. This is useful for testing new strategies or for testing existing strategies on new assets.

@@ -3,6 +3,10 @@
 ## Your task
 Create model of each domain discovered in the previous task. Separate application logic and domain logic. Respect the requirements and domain rules according to the original document.
 
+Let's start with simple manual investments
+- Invest manually into one of projects
+- Invest into assets
+
 ### Propose aggregates and entities
 1. Start with responsibilities (methods) and group methods according to rules (invariants)
 2. Create internal structure of aggregates
