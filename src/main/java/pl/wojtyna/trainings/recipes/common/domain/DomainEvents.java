@@ -40,7 +40,11 @@ public class DomainEvents {
     }
 
     public DomainEvents following(DomainEvent event) {
-        return new DomainEvents(Stream.concat(stream(), Stream.of(event)).collect(Collectors.toList()));
+        return new DomainEvents(Stream.concat(stream(), Stream.of(event)).toList());
+    }
+
+    public DomainEvents following(DomainEvents events) {
+        return new DomainEvents(Stream.concat(stream(), events.stream()).toList());
     }
 
     public void publish(DomainEventPublisher domainEventPublisher) {

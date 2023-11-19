@@ -1,4 +1,4 @@
-package pl.wojtyna.trainings.recipes.crowdsorcery.solutions.commandinvoker;
+package pl.wojtyna.trainings.recipes.crowdsorcery.solutions.outbox;
 
 import java.util.Optional;
 
