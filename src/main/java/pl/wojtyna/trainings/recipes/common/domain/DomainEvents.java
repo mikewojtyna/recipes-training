@@ -38,4 +38,12 @@ public class DomainEvents {
     public boolean hasAtLeastOneEventMatching(Predicate<DomainEvent> predicate) {
         return eventList.stream().anyMatch(predicate);
     }
+
+    public DomainEvents following(DomainEvent event) {
+        return new DomainEvents(Stream.concat(stream(), Stream.of(event)).collect(Collectors.toList()));
+    }
+
+    public void publish(DomainEventPublisher domainEventPublisher) {
+        domainEventPublisher.publish(this);
+    }
 }

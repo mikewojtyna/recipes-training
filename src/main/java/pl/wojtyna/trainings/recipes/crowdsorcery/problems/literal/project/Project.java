@@ -9,7 +9,7 @@ public class Project {
         if (investor.deposit().isLessThan(investment.amount())) {
             throw new IllegalArgumentException("Investor does not have enough money");
         }
-        investor.redceBalanceBy(investment.amount());
+        investor.reduceBalanceBy(investment.amount());
         investments.add(investment);
         if(investments.noInvestmentWasMadeSoFar()) {
             fundraising.start();

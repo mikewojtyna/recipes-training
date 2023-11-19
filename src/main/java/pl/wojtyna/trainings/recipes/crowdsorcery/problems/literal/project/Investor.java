@@ -8,7 +8,7 @@ public class Investor {
         return null;
     }
 
-    public void redceBalanceBy(Money money) {
+    public void reduceBalanceBy(Money money) {
 
     }
 }
