@@ -1,4 +1,4 @@
-package pl.wojtyna.trainings.recipes.crowdsorcery.problems.layers;
+package pl.wojtyna.trainings.recipes.crowdsorcery.solutions.layers;
 
 import org.joda.money.Money;
 
