@@ -3,6 +3,7 @@ package pl.wojtyna.trainings.recipes.crowdsorcery.solutions.task3.contextmap;
 import guru.nidi.graphviz.engine.Format;
 import org.contextmapper.contextmap.generator.ContextMapGenerator;
 import org.contextmapper.contextmap.generator.model.*;
+import org.springframework.data.domain.Range;
 
 import java.io.IOException;
 
@@ -16,8 +17,16 @@ public class ContextMapperExample {
         var fundraising = new BoundedContext("Fundraising");
         var simulation = new BoundedContext("Simulation");
         var interest = new BoundedContext("Interest");
+        var portfolio = new BoundedContext("Portfolio");
+        var legal = new BoundedContext("Legal");
+        var identity = new BoundedContext("Identity");
+        var defaults = new BoundedContext("Defaults");
 
         var contextMap = new ContextMap()
+            .addBoundedContext(defaults)
+            .addBoundedContext(identity)
+            .addBoundedContext(legal)
+            .addBoundedContext(portfolio)
             .addBoundedContext(deposit)
             .addBoundedContext(investment)
             .addBoundedContext(payment)
@@ -27,7 +36,7 @@ public class ContextMapperExample {
             .addBoundedContext(interest)
             .addRelationship(new UpstreamDownstreamRelationship(
                 deposit,
-                investment).setUpstreamPatterns(UpstreamPatterns.OPEN_HOST_SERVICE)
+                investment).setUpstreamPatterns(UpstreamPatterns.OPEN_HOST_SERVICE, UpstreamPatterns.PUBLISHED_LANGUAGE)
                            .setDownstreamPatterns(
                                DownstreamPatterns.ANTICORRUPTION_LAYER,
                                DownstreamPatterns.CONFORMIST).setCustomerSupplier(true)
@@ -37,9 +46,6 @@ public class ContextMapperExample {
                 UpstreamPatterns.OPEN_HOST_SERVICE,
                 UpstreamPatterns.PUBLISHED_LANGUAGE).setDownstreamPatterns(
                 DownstreamPatterns.ANTICORRUPTION_LAYER).setCustomerSupplier(false))
-            .addRelationship(new UpstreamDownstreamRelationship(deposit, fundraising).setUpstreamPatterns(
-                                                                                         UpstreamPatterns.OPEN_HOST_SERVICE).setDownstreamPatterns(DownstreamPatterns.CONFORMIST)
-                                                                                     .setCustomerSupplier(true))
             .addRelationship(new Partnership(investment, simulation))
             .addRelationship(new UpstreamDownstreamRelationship(deposit, interest).setCustomerSupplier(true)
                                                                                   .setUpstreamPatterns(UpstreamPatterns.OPEN_HOST_SERVICE)
