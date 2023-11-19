@@ -2,7 +2,7 @@ package pl.wojtyna.trainings.recipes.crowdsorcery.solutions.task3.investment.tra
 
 import org.joda.money.Money;
 import pl.wojtyna.trainings.recipes.crowdsorcery.solutions.task3.investment.transfer.Account;
-import pl.wojtyna.trainings.recipes.crowdsorcery.solutions.task3.deposit.api.usecases.TransferUseCase;
+import pl.wojtyna.trainings.recipes.crowdsorcery.solutions.task3.deposit.api.usecases.LocalTransferUseCase;
 import pl.wojtyna.trainings.recipes.crowdsorcery.solutions.task3.deposit.domain.account.AccountId;
 import pl.wojtyna.trainings.recipes.crowdsorcery.solutions.task3.investment.transfer.TransferOperations;
 
@@ -10,9 +10,9 @@ import java.util.UUID;
 
 public class DepositContextTransferOperations implements TransferOperations {
 
-    private final TransferUseCase transferUseCase;
+    private final LocalTransferUseCase transferUseCase;
 
-    public DepositContextTransferOperations(TransferUseCase transferUseCase) {this.transferUseCase = transferUseCase;}
+    public DepositContextTransferOperations(LocalTransferUseCase localTransferUseCase) {this.transferUseCase = localTransferUseCase;}
 
     @Override
     public void transfer(Account from, Account to, Money amount) {
