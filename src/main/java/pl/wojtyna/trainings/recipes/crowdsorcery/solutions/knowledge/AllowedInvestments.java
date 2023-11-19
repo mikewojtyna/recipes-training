@@ -1,4 +1,4 @@
-package pl.wojtyna.trainings.recipes.crowdsorcery.problems.knowledge;
+package pl.wojtyna.trainings.recipes.crowdsorcery.solutions.knowledge;
 
 public interface AllowedInvestments {
 
