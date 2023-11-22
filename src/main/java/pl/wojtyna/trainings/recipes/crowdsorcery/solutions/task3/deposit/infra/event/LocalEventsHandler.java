@@ -1,10 +1,10 @@
 package pl.wojtyna.trainings.recipes.crowdsorcery.solutions.task3.deposit.infra.event;
 
 import org.springframework.context.event.EventListener;
-import pl.wojtyna.trainings.recipes.crowdsorcery.solutions.task3.deposit.domain.payment.DepositInitiatedPolicy;
-import pl.wojtyna.trainings.recipes.crowdsorcery.solutions.task3.deposit.domain.payment.PaymentVerified;
 import pl.wojtyna.trainings.recipes.crowdsorcery.solutions.task3.deposit.domain.account.DepositInitiated;
 import pl.wojtyna.trainings.recipes.crowdsorcery.solutions.task3.deposit.domain.account.PaymentVerifiedPolicy;
+import pl.wojtyna.trainings.recipes.crowdsorcery.solutions.task3.deposit.domain.payment.DepositInitiatedPolicy;
+import pl.wojtyna.trainings.recipes.crowdsorcery.solutions.task3.deposit.domain.payment.PaymentVerified;
 
 public class LocalEventsHandler {
 
@@ -19,7 +19,7 @@ public class LocalEventsHandler {
 
     @EventListener
     public void handle(DepositInitiated depositInitiated) {
-        depositInitiatedPolicy.handle(depositInitiated);
+        depositInitiatedPolicy.when(depositInitiated);
     }
 
     @EventListener

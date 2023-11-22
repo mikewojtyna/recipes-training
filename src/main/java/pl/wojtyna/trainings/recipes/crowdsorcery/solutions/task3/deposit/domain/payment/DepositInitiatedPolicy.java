@@ -9,7 +9,7 @@ public class DepositInitiatedPolicy implements DomainPolicy {
 
     public DepositInitiatedPolicy(PaymentProcessor paymentProcessor) {this.paymentProcessor = paymentProcessor;}
 
-    public void handle(DepositInitiated event) {
+    public void when(DepositInitiated event) {
         paymentProcessor.process(event.deposit());
     }
 }
